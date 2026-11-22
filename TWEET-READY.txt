@@ -1,0 +1,9 @@
+StackAlign static triage (2026-11-22)
+
+• 0 confirmed exploitable findings under 7-Question Gate
+• Defensive design holds on paper (fixed paths, sa_exec allowlist, no-eval, atomic writes, secrets-as-hash)
+• 1 open thread: incomplete sa_exec migration (K4) — residual sites enumerated, no concrete root-apply chain yet
+• Highest residual surfaces: history undo generation + config atomic writer callers
+• Runtime/EL9 apply still untested — treat as Phase 1–4 static result, not clearance
+
+Next: close K4 caller review → disposable EL9 runtime pass
